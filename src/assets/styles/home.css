@@ -1,0 +1,160 @@
+
+/*----------------- Header ------------------ */
+.header_bg{
+    width: 93%;
+}
+.header_picture{
+    left: 18%;
+    top: 35%;
+    width: 78%;
+}
+.header_top{
+    /* margin-top: 12.5rem; */
+    margin-top: 12%;
+}
+.prueba{
+    background-image: url('../icons/paws_bg.svg');
+    background-repeat: no-repeat;
+}
+.header_title{
+    font-size: 2.9rem;
+    font-weight: 600;
+}
+.blue{
+    color: #A2E0F1;
+}
+.header_paragraph{
+    color: #929292;
+    width: 80%;
+    font-size: 1.1rem;
+}
+
+/* ----------------OurMission--------------- */
+.bg_Mission{
+    background-image: url('../icons/paws_bg.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.mission-title, .happy-title{
+    font-weight: 600 !important;
+}
+.mission-sub{
+    font-weight: 600 !important;
+}
+.cont-icon-mission{
+    background-color: #505562;
+    height: 11.8rem;
+    width: 13rem;
+    border-radius: 50%;
+}
+
+.icon-mission{
+    /* width: 7rem; */
+    height: 8rem;
+}
+.mission-size{
+    font-size: 1.8vh;
+}
+
+/* ----------------CardNeeds--------------- */
+.needs-bg {
+    background-image: url('../icons/needs_bg.svg');
+    background-position: center;
+    background-size: 100%; 
+    background-repeat: no-repeat;
+    position: relative; 
+    z-index: 0;
+    padding: 6%;
+}
+.needs-title{
+    font-weight: 600 !important;
+    border-bottom: 2px solid;
+    width: 40%;
+}
+
+.needs-bgcat{
+    z-index: -1;
+}
+
+.needs-paragraph{
+    width: 87%;
+    font-size: 2vh;
+    color: black;
+}
+.needs-cat{
+    width: 82%;
+}
+
+.needs-row{
+    margin-top: 6.5%;
+}
+
+@media (max-width: 1237px) {
+    .needs-bg{
+        background-image: none !important;
+    }
+    .needs-title{
+        width: 100%;
+        text-align: center;
+    }
+    .needs-paragraph{
+        width: 100%;
+    }
+    .bg_Mission{
+        background-size: 200%;
+    }
+}
+
+/*----------------- Happy histories ------------------ */
+.bg_happy{
+    background-image: url('../icons/paws_bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.happy_img{
+    width: 7rem;
+    border-radius: 20px;
+}
+.cont-img-happy{
+    margin-bottom: 5.5rem;
+}
+.happy_cont{
+    background-color: rgba(245, 99, 172, 0.53);
+    border-radius: 300px 100px 300px 100px;
+}
+.happy_img_center{
+    width: 12rem;
+    height: 10rem;
+    border-radius: 20px;
+    left: 35%;
+}
+.happy-paragraph{
+    margin-top: 10%;
+    font-size: 1.6vh;
+}
+
+.arrows img{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+@media (max-width: 403px) {
+     .happy_img_center{
+        left: 24%;
+     }
+}
+@media (min-width: 414px) {
+    .bg_happy{
+        background-position: left;
+     }
+}
+/* ---------------- footer ---------------- */
+.footer_bg{
+    background-color: #EEF1F3;
+}
+.footer_icons{
+    background-color: #71C5EB;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}

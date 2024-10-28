@@ -1,0 +1,34 @@
+.blue{
+    color: #71C5EB;
+}
+.corner-section{
+    width: 55%;
+}
+.encabezado-section{
+    width: 100% !important;
+}
+.title-section{
+    font-weight: 600;
+    width: 45%;
+}
+.text-section{
+    width: 100%;
+}
+@media (max-width: 992px) {
+    .corner-section{
+        width: 14% ;
+        position: absolute;
+        z-index: -1;
+    }
+    .title-section{
+        width: 75%;
+    }
+}
+/* @media (min-width: 300px) {
+    .corner-section{
+      
+    }
+    .title-section{
+        width: 60%;
+    }
+} */

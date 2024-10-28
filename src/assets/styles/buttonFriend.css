@@ -1,0 +1,12 @@
+.button-friend{
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+}
+@media (max-width: 1237px) {
+    .button-friend{
+        font-size: 0.9rem;
+    }
+}
