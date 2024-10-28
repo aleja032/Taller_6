@@ -8,7 +8,10 @@ function AppRoutes() {
            <BarNavigation />
            <Routes>
                <Route path="/" element={ <Home /> } />
-               <Route path="/SeccionesLayout" element={ <SeccionesLayout /> } />
+               <Route path="/cats" element={ <SeccionesLayout /> } />
+               <Route path="/dogs" element={ <SeccionesLayout /> } />
+               <Route path="/favorites" element={ <SeccionesLayout /> } />
+
            </Routes>
        </BrowserRouter>
     )

@@ -1,13 +1,22 @@
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../assets/styles/seccionesLayout.css';
 import leftTemplate from '../assets/images/left-template.webp';
 import rightTemplate from '../assets/images/right-template.webp';
 import CatService from '../services/catService.js';
 import DogService from '../services/dogService.js';
+import TittleSection from '../components/TittleSection.jsx';
+
 function SeccionesLayout() {
+      const location = useLocation();
+
+      const pagCat = location.pathname === '/cats' ? 'yes' : 'no';
+      const pagDog = location.pathname === '/dogs' ? 'yes' : 'no';
+
+      console.log('rutas: ', pagCat);
       const [cats, setCats] = useState([]);
       const [dogs, setDogs] = useState([]);
-      
+
       const getCat = async () => {
           const dataCats = await CatService.getCats();
           console.log('dataCats:', dataCats); 
@@ -32,7 +41,9 @@ function SeccionesLayout() {
             </div>
             <div className="border col-12 col-lg-8 d-flex flex-column align-items-center ">
                 <div className="pt-5 text-center d-flex flex-column align-items-center encabezado-section">
-                    <h2 className='pt-5 pb-4 title-section '>Our Friends who are looking for a <span className='blue'>house</span></h2>
+
+                    <TittleSection title = {pagCat === 'yes' || pagDog === 'yes' ? 'both' : 'favorites'} />
+                    
                     <p className='text-section text-start px-4 px-lg-0'>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 

@@ -26,7 +26,7 @@ function BarNavigation() {
                 <div className="collapse navbar-collapse m-0 me-lg-5 " id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto text-center p-3 p-lg-0">
                         <Link to="/" className="nav-link ms-2 pe-5">Home</Link>
-                        <Link to="/SeccionesLayout" className="nav-link ms-2 pe-5">Cats</Link>
+                        <Link to="/cats" className="nav-link ms-2 pe-5">Cats</Link>
                         <Link to="/dogs" className="nav-link ms-2 pe-5">Dogs</Link>
                         <Link to="/favorites" className="nav-link ms-2 pe-5">My favorites</Link>
                     </div>
