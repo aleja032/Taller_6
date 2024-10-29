@@ -4,7 +4,7 @@ import '../assets/styles/seccionesLayout.css';
 import leftTemplate from '../assets/images/left-template.webp';
 import rightTemplate from '../assets/images/right-template.webp';
 import CatService from '../services/catService.js';
-import DogService from '../services/dogService.js';
+
 import TittleSection from '../components/TittleSection.jsx';
 
 function SeccionesLayout() {
@@ -15,21 +15,17 @@ function SeccionesLayout() {
 
       console.log('rutas: ', pagCat);
       const [cats, setCats] = useState([]);
-      const [dogs, setDogs] = useState([]);
+      
 
       const getCat = async () => {
           const dataCats = await CatService.getCats();
           console.log('dataCats:', dataCats); 
           setCats(dataCats); 
       };
-      const getDog = async () => {
-          const dataDogs = await DogService.getDogs();
-          setDogs(dataDogs); 
-          console.log('dataDogs:', dataDogs); 
-      }
+      
       useEffect(() => {
           getCat();
-          getDog();
+          
       }, []); // El array vacío asegura que se ejecute solo al montar el componente
   
 
@@ -57,9 +53,7 @@ function SeccionesLayout() {
                             <img src={cats[0].url} alt="cat" className="img-fluid" />}
                              {cats.length > 0 && <h1>{cats[0].id}</h1>}
                         </div>
-                        <div className="col-12">
-                            {dogs.length > 0 && <img src={dogs[0].url} alt="cat" className="img-fluid" />}
-                        </div>
+                        
                         {/* <div className="border col-12 p-5 col-lg-5">2</div>
                         <div className="border col-12 p-5 col-lg-5">2</div>
                         <div className="border col-12 p-5 col-lg-5">3</div>
