@@ -10,10 +10,18 @@
 .title-section{
     font-weight: 600;
     width: 45%;
+    font-size: 1.8rem;
 }
 .text-section{
     width: 100%;
 }
+.const-list-cards {
+    width: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media (max-width: 992px) {
     .corner-section{
         width: 14% ;
@@ -24,11 +32,4 @@
         width: 75%;
     }
 }
-/* @media (min-width: 300px) {
-    .corner-section{
-      
-    }
-    .title-section{
-        width: 60%;
-    }
-} */
+

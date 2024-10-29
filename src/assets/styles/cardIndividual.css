@@ -1,0 +1,81 @@
+.card{
+    width: 31%;
+    border : none;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.bg-blue{
+    width: 10.5rem;
+    height: 9rem;
+    border-radius: 50%;
+}
+.card-img{
+    width: 9.7rem;
+    height: 9rem;
+    top: 8px;
+    border-radius: 50%;
+}
+.card-title{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.card-description{
+    color: black;
+    font-size: 0.8rem;
+}
+.card-sub-title{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.card-temperament{
+    font-size: 0.8rem;
+}
+.card-gray{
+    color: #929292;
+    font-size: 0.8rem;
+}
+.card-gray-span{
+    color: #929292;
+    font-weight: 600;
+}
+.btn-more, .btn-consider, .btn-consider:disabled{
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+.btn-more{
+    background-color: #71C5EB;
+}
+.btn-consider:disabled{
+    background-color: #929292;
+}
+.btn-consider{
+    background-color: #85E3CC;
+}
+.btn-more:hover {
+    background-color: hsl(190, 60%, 65%); 
+    box-shadow: 0 0 15px rgba(7, 163, 206, 0.5); 
+    color: white;
+
+}
+
+.btn-consider:hover {
+    background-color: hsl(165, 50%, 60%); 
+    box-shadow: 0 0 15px rgba(5, 197, 149, 0.5); 
+    color: white;
+}
+
+
+@media (max-width: 930px) {
+    .card {
+        width: 47%; 
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%; 
+    }
+}
