@@ -1,9 +1,9 @@
-
-import Header from '../components/Header.jsx';
-import OurMission from '../components/OurMission.jsx';
-import CardNeeds from '../components/CardNeeds.jsx';
-import HappyHistories from '../components/HappyHistories.jsx';
-import Footer from '../components/Footer.jsx';
+import '../assets/styles/home.css';
+import Header from '../layouts/Header.jsx';
+import OurMission from '../layouts/OurMission.jsx';
+import CardNeeds from '../layouts/CardNeeds.jsx';
+import HappyHistories from '../layouts/HappyHistories.jsx';
+import Footer from '../layouts/Footer.jsx';
 function Home() {
     return (
         <>

@@ -1,15 +1,9 @@
 import heart from '../assets/icons/heart.svg';
 import '../assets/styles/cardIndividual.css';
 import ModalDetails from './ModalDetails.jsx';
-import { useDispatch, useSelector } from 'react-redux';
-import { addFavorite, setDisabled } from '../redux/slice.js';
-import { useState } from 'react';
-function CardIndividual({ data, type, show }) {
-    const dispatch = useDispatch();
+import ButtonConsider from './ui/ButtonConsider.jsx';
 
-    function handleFavorite(data) {
-        dispatch(addFavorite(data));    
-    }
+function CardIndividual({ data, type, show }) {
     return (
         <div className="card mb-4 ">
             <div className="mt-3 cont-card  d-flex justify-content-center position-relative">
@@ -57,7 +51,7 @@ function CardIndividual({ data, type, show }) {
                     <button type="button" className="btn py-0 py-lg-1 py-xl-2 px-4 btn-more" data-bs-toggle="modal" data-bs-target={`#modalDetails${data.id}`}>
                         Know More...
                     </button>
-                    <ModalDetails data={data} type={type} show={show} handleFavorite={handleFavorite} />
+                    <ModalDetails data={data} type={type} show={show} />
                     { type==='favorites' ? 
                           <button
                           type="button"
@@ -66,16 +60,7 @@ function CardIndividual({ data, type, show }) {
                               <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
                           </button>
                           :
-                        <button
-                        type="button"
-                        className="btn py-0 py-lg-1 py-xl-2 px-4 btn-consider"
-                        onClick={() => handleFavorite(data)
-                        }
-                        disabled = {show}
-                        >
-                            Consider it
-                            <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
-                        </button>
+                          <ButtonConsider data={data} show={show} />
                     }
                    
                 </div>

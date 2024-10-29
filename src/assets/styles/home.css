@@ -9,7 +9,6 @@
     width: 78%;
 }
 .header_top{
-    /* margin-top: 12.5rem; */
     margin-top: 12%;
 }
 .prueba{
@@ -51,7 +50,6 @@
 }
 
 .icon-mission{
-    /* width: 7rem; */
     height: 8rem;
 }
 .mission-size{
@@ -148,6 +146,7 @@
         background-position: left;
      }
 }
+
 /* ---------------- footer ---------------- */
 .footer_bg{
     background-color: #EEF1F3;

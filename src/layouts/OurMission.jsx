@@ -1,4 +1,3 @@
-import '../assets/styles/home.css';
 import petsLove from '../assets/images/lovePets.webp';
 import health from '../assets/images/health.webp';
 import world from '../assets/images/world.webp';

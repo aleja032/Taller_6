@@ -2,10 +2,9 @@
 import '../assets/styles/modalDetails.css'
 import heart from '../assets/icons/heart.svg';
 import reply from '../assets/icons/reply.svg'
-import bg_modal from '../assets/icons/bg-modal.svg';
+import ButtonConsider from './ui/ButtonConsider.jsx';
 
-function ModalDetails({ data, type, show, handleFavorite }) {
-
+function ModalDetails({ data, type, show }) {
     return (
         <div className={`modal fade`} id={`modalDetails${data.id}`} tabIndex="-1" aria-hidden="true">
             <div className="modal-dialog  modal-lg modal-dialog-centered">
@@ -32,16 +31,7 @@ function ModalDetails({ data, type, show, handleFavorite }) {
                                     <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
                                 </button>
                                 :
-                                <button
-                                type="button"
-                                className="btn py-0 py-lg-1 py-xl-2 px-4 btn-consider"
-                                onClick={() => handleFavorite(data)
-                                }
-                                disabled = {show}
-                                >
-                                    Consider it
-                                    <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
-                                </button>
+                                <ButtonConsider show={show}  data={data} />
                             }
                                 <button type="button" className="btn mt-2 ms-lg-2 mt-lg-0 py-2 py-lg-1 py-xl-2 px-4 d-flex align-items-center btn-more">
                                     Share link

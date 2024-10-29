@@ -1,5 +1,4 @@
-import '../assets/styles/home.css';
-import ButtonFriend from './ButtonFriend';
+import ButtonFriend from '../components/ui/ButtonFriend';
 import poorCat from '../assets/icons/poorCat.svg';
 function CardNeeds() {
     return (

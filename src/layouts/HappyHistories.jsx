@@ -1,4 +1,3 @@
-import '../assets/styles/home.css';
 import owner_cat from '../assets/images/owner_cat.jpg';
 import owner_dog from '../assets/images/owner_dog.jpg';
 import girl_cat from '../assets/images/girl_cat.jpg';

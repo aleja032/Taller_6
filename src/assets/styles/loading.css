@@ -1,0 +1,6 @@
+ .loading-container {
+    height: 20vh;
+    width: 100%;
+    color: #3498db !important; 
+    font-weight: 500;
+}

@@ -12,12 +12,9 @@ class DogService{
             if(!response.ok){
                 throw new Error(`Error: ${response.status} ${response.statusText}`);
             }
-            console.log(response);
             return response.json();
         }catch(err){
             console.log(err);
-        }finally{
-            console.log('siuuuaa');
         }
     }
 }export default new DogService();

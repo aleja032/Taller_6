@@ -5,7 +5,6 @@ export const  fetchInterceptor = ({url, key}) => {
         headers: {
             'Content-Type': 'application/json',
             'x-api-key' : key,
-            // Authorization: 'Bearer ULTRA_SECRET_KEY',
         },
     });
 }

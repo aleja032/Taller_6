@@ -1,8 +1,6 @@
-// import '../assets/styles/header.css';
-import '../assets/styles/home.css';
 import mainPicture from '../assets/images/mainPicture.webp';
 import bg_header from '../assets/icons/bg-header.svg';
-import ButtonFriend from './ButtonFriend';
+import ButtonFriend from '../components/ui/ButtonFriend';
 
 function Header() {
   return (

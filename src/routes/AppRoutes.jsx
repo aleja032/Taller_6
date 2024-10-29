@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SeccionesLayout from '../pages/SeccionesLayout.jsx';
 import Home from '../pages/Home.jsx';
-import BarNavigation from '../components/BarNavigation.jsx';
+import BarNavigation from '../layouts/BarNavigation.jsx';
 function AppRoutes() {
     return (
        <BrowserRouter>
@@ -11,7 +11,6 @@ function AppRoutes() {
                <Route path="/cats" element={ <SeccionesLayout /> } />
                <Route path="/dogs" element={ <SeccionesLayout /> } />
                <Route path="/favorites" element={ <SeccionesLayout /> } />
-
            </Routes>
        </BrowserRouter>
     )
