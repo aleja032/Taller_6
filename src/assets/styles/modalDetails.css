@@ -1,0 +1,45 @@
+.modal {
+    background-color: transparent !important;
+    backdrop-filter: blur(5px) !important;
+}
+.modal-img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 30px;
+}
+.modal-content{
+    border-radius: 25px !important;
+    border: none;
+}
+
+.text-gray-wiki{
+    font-size: 0.7rem;
+}
+.text-gray{
+    font-size: 0.9rem;
+}
+.text-gray_{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.text-gray_, .text-gray, .text-gray{
+    color: #929292;
+}
+.modal-titulo{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+.modal-info{
+    width: 70%;
+}
+.description-modal{
+    font-size: 1.9vh;
+    color: black !important;
+}
+.weight-medium{
+    font-weight: 500;
+}
+.cont-modal{
+    font-size: 1.9vh;
+    width: 100%;
+}

@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import '../assets/styles/seccionesLayout.css';
 import leftTemplate from '../assets/images/left-template.webp';
 import rightTemplate from '../assets/images/right-template.webp';
-import CatService from '../services/catService.js';
 import DogService from '../services/dogService.js';
 import TittleSection from '../components/TittleSection.jsx';
 
@@ -14,23 +13,18 @@ function SeccionesLayout() {
       const pagDog = location.pathname === '/dogs' ? 'yes' : 'no';
 
       console.log('rutas: ', pagCat);
-      const [cats, setCats] = useState([]);
       const [dogs, setDogs] = useState([]);
 
-      const getCat = async () => {
-          const dataCats = await CatService.getCats();
-          console.log('dataCats:', dataCats); 
-          setCats(dataCats); 
-      };
+      
       const getDog = async () => {
           const dataDogs = await DogService.getDogs();
           setDogs(dataDogs); 
           console.log('dataDogs:', dataDogs); 
       }
       useEffect(() => {
-          getCat();
+
           getDog();
-      }, []); // El array vacío asegura que se ejecute solo al montar el componente
+      }, []); 
   
 
     return (
@@ -49,61 +43,26 @@ function SeccionesLayout() {
                         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                     </p>
                 </div>
-                    <div className="row border gap-2 justify-content-center mt-5">
-                        <div className="col-12">
-                            {/* Muestra la imagen solo si hay gatos */}
-                            {cats.length > 0 && 
-                            
-                            <img src={cats[0].url} alt="cat" className="img-fluid" />}
-                             {cats.length > 0 && <h1>{cats[0].id}</h1>}
-                        </div>
-                        <div className="col-12">
-                            {dogs.length > 0 && <img src={dogs[0].url} alt="cat" className="img-fluid" />}
-                        </div>
-                        {/* <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">3</div>
-                        <div className="border col-12 p-5 col-lg-5">4</div>
-                        <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">3</div>
-                        <div className="border col-12 p-5 col-lg-5">4</div>
-                        <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">2</div>
-                        <div className="border col-12 p-5 col-lg-5">3</div>
-                        <div className="border col-12 p-5 col-lg-5">4</div> */}
-                    </div>
-          
             </div>
 
-            <div className="border col-12 col-lg-2  mt-lg-5 pt-lg-5 d-none d-lg-flex justify-content-end align-items-start">
+            <div className="border col-12 col-lg-2  mt-lg-2 pt-lg-5 d-none d-lg-flex justify-content-end align-items-start">
                 <img src={rightTemplate} alt="corner-img" className="mt-0 mt-lg-5 img-fluid corner-section" />
             </div>
         </div>
-        {/* <div className="row gx-0 border">
-            <div className="p-3 border col-lg-1">
 
-            </div>
-            <div className="p-3 border col-lg-10">
-                  <div className="row border justify-content-center gap-3 mt-5">
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">3</div>
-                    <div className="border col-12 p-5 col-lg-5">4</div>
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">3</div>
-                    <div className="border col-12 p-5 col-lg-5">4</div>
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">2</div>
-                    <div className="border col-12 p-5 col-lg-5">3</div>
-                    <div className="border col-12 p-5 col-lg-5">4</div>
-                </div>
-            </div>
-            <div className="p-3 border col-lg-1">
-            
-            </div>
-        </div> */}
+        <div className="d-flex justify-content-center">
+             <div className="const-list-cards">
+                     { pagDog === 'yes' ?
+                         dogs.map((dog) =>  
+                            <button data-bs-toggle="modal" data-bs-target={`#modalDetails${dog.id}`}>
+                         Sabermas
+                         </button> 
+                        ) : 'Pagina Favoritos'
+                     } 
+                    
+             </div>
+        </div>     
+      
         </>
     )
 } export default SeccionesLayout;

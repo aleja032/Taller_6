@@ -23,7 +23,7 @@ function BarNavigation() {
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon custom-toggler"></span>
                 </button>
-                <div className="collapse navbar-collapse m-0 me-lg-5 " id="navbarNavAltMarkup">
+                <div className="collapse navbar-collapse  " id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto text-center p-3 p-lg-0">
                         <Link to="/" className="nav-link ms-2 pe-5">Home</Link>
                         <Link to="/cats" className="nav-link ms-2 pe-5">Cats</Link>
