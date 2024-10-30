@@ -1,6 +1,7 @@
+import { loadLocalStorage } from "../localStorage/localStorage";
 
 export const initialState = {
-    favorites: [],
+    favorites: loadLocalStorage ? loadLocalStorage('favorites') : [],
     cats: [],
     dogs: [],
     status: 'idle', 

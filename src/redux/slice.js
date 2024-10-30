@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from './state.js';
 import { fetchCats } from './catsThunk.js';
 import { fetchDogs } from './dogsThunk.js'; 
+import { saveLocalStorage } from '../localStorage/localStorage.js';
 
 const catAndDogSlice = createSlice({
     name: 'catAndDogSlice',
@@ -9,7 +10,14 @@ const catAndDogSlice = createSlice({
     reducers: {
         addFavorite: (state, action) => {
             state.favorites.push(action.payload);
+            saveLocalStorage('favorites', state.favorites); 
+
             console.log(action.payload);
+        },
+        deleteFavorite: (state, action) => {
+            const favorites = state.favorites.filter(item => item.id !== action.payload);
+            state.favorites = favorites;
+            saveLocalStorage('favorites', favorites);
         },
     },
     extraReducers: (builder) => {
@@ -40,5 +48,5 @@ const catAndDogSlice = createSlice({
         });
     }
 });
-export const { addFavorite } = catAndDogSlice.actions;
+export const { addFavorite, deleteFavorite } = catAndDogSlice.actions;
 export default catAndDogSlice.reducer;

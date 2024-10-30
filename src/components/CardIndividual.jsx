@@ -2,6 +2,7 @@ import heart from '../assets/icons/heart.svg';
 import '../assets/styles/cardIndividual.css';
 import ModalDetails from './ModalDetails.jsx';
 import ButtonConsider from './ui/ButtonConsider.jsx';
+import ButtonDelete from './ui/ButtonDelete.jsx';
 
 function CardIndividual({ data, type, show }) {
     return (
@@ -53,14 +54,17 @@ function CardIndividual({ data, type, show }) {
                     </button>
                     <ModalDetails data={data} type={type} show={show} />
                     { type==='favorites' ? 
-                          <button
-                          type="button"
-                          className=" btn py-0 py-lg-1 py-xl-2 px-4 btn-consider">
+                     <div className="d-flex">
+                        <button
+                            type="button"
+                            className=" btn btn-consider">
                               Adoptarlo
-                              <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
-                          </button>
-                          :
-                          <ButtonConsider data={data} show={show} />
+                            <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
+                        </button>
+                         <ButtonDelete id= {data.id} />
+                        </div>
+                         :
+                        <ButtonConsider data={data} show={show} />
                     }
                    
                 </div>

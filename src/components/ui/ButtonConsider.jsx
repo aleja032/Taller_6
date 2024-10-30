@@ -11,7 +11,7 @@ function ButtonConsider({ data, show}) {
     return (
         <button
             type="button"
-            className="btn py-0 py-lg-1 py-xl-2 px-4 btn-consider"
+            className="btn py-0 py-lg-1 py-xl-2 px-3 btn-consider"
             onClick={() => handleFavorite(data)
             }
             disabled={show}

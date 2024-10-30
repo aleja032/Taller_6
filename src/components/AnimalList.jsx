@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCats } from '../redux/catsThunk.js';
 import { fetchDogs } from '../redux/dogsThunk';
+import { clearLocalStorage, loadLocalStorage } from '../localStorage/localStorage.js';
 import CardIndividual from '../components/CardIndividual.jsx';
 import Loading from '../components/ui/Loading.jsx';
 
@@ -11,17 +12,19 @@ function AnimalList({ pag }) {
     useEffect(() => {
         dispatch(fetchCats());
         dispatch(fetchDogs());
+        console.log(favorites);
+        console.log(loadLocalStorage('favorites'));
     }, []);
 
     const cats = useSelector((state) => state.catAndDog.cats);
     const dogs = useSelector((state) => state.catAndDog.dogs);
     const favorites = useSelector((state) => state.catAndDog.favorites);
     const status = useSelector((state) => state.catAndDog.status);
-
+    
     return (
         <div className="d-flex justify-content-center">
             <div className="const-list-cards">
-                {status === 'loading' ? (
+                { status === 'loading' ? (
                     <Loading />
                 ) : pag === 'cat' ?
                     cats.map((cat) => {
@@ -54,7 +57,8 @@ function AnimalList({ pag }) {
                                     show={true}
                                 />
                             ) : <p className='ms-5'>There are no favorites available</p>
-                }
+                } 
+
 
             </div>
         </div>
