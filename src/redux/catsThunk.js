@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import CatService from '../services/catService';
+import CatService from '../services/CatService';
 
 export const fetchCats = createAsyncThunk(
   'cats/fetchCats',
