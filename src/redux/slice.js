@@ -11,8 +11,6 @@ const catAndDogSlice = createSlice({
         addFavorite: (state, action) => {
             state.favorites.push(action.payload);
             saveLocalStorage('favorites', state.favorites); 
-
-            console.log(action.payload);
         },
         deleteFavorite: (state, action) => {
             const favorites = state.favorites.filter(item => item.id !== action.payload);

@@ -61,7 +61,7 @@ function CardIndividual({ data, type, show }) {
                               Adoptarlo
                             <img src={heart} alt="heart" className="ms-0 ms-xl-2 img-fluid" />
                         </button>
-                         <ButtonDelete id= {data.id} />
+                        <ButtonDelete id= {data.id} />
                         </div>
                          :
                         <ButtonConsider data={data} show={show} />
